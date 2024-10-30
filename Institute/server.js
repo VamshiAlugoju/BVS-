@@ -481,8 +481,9 @@ app.post('/api/users/login', async (req, res) => {
 // Use admin routes
 app.use('/api/admin', adminRoutes);
 
+const host = "0.0.0.0";
 // Start the server
-app.listen(PORT, () => {
+app.listen(PORT,host, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
